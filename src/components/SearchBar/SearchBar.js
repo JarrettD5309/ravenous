@@ -2,7 +2,6 @@ import React from 'react';
 import './SearchBar.css';
 
 
-
 class SearchBar extends React.Component {
 
     constructor(props) {
@@ -31,7 +30,7 @@ class SearchBar extends React.Component {
                 <li
                     className={this.getSortByClass(sortByOptionValue)}
                     key={sortByOptionValue}
-                    onClick={this.handleSortByChange.bind(this,sortByOptionValue)}
+                    onClick={this.handleSortByChange.bind(this, sortByOptionValue)}
                 >
                     {sortByOption}
                 </li>
@@ -40,7 +39,7 @@ class SearchBar extends React.Component {
     };
 
     getSortByClass(sortByOption) {
-        if(this.state.sortBy===sortByOption) {
+        if (this.state.sortBy === sortByOption) {
             return 'active';
         } else {
             return '';
@@ -79,12 +78,12 @@ class SearchBar extends React.Component {
                     </ul>
                 </div>
                 <div className="SearchBar-fields">
-                    <input 
+                    <input
                         placeholder="Search Businesses"
-                        onChange={this.handleTermChange} 
+                        onChange={this.handleTermChange}
                     />
-                    <input 
-                        placeholder="Where?" 
+                    <input
+                        placeholder="Where?"
                         onChange={this.handleLocationChange}
                     />
                 </div>
